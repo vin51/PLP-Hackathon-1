@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.left-half {
+    display: flex;
+    flex: 1;
+    background-color: rgb(114, 200, 247);
+    height: 100%; 
+    position: relative;
+}
+
+.img-1 {
+    display: block;
+    margin: 150px auto -12px auto;
+    width: 110px;
+    border-radius: 50%;
+}
+
+.right-header {
+    font-size: 1.75em !important;
+    text-align: center;
+    margin-top: 1em;
+    margin-left: 0.5em;
+}
+
+.musili{
+    color: rosybrown;
+}
+
+.scrollable-half {
+    position: relative;
+    flex: 1;
+    overflow-y: auto;
+    background-color: whitesmoke;
+
+}
+
+.scrollable-half .content {
+    padding: 20px;
+    height: 200vh;
+    /* Making the content taller than the viewport to enable scrolling */
+}
+
+.h2, .contact{
+    display: flex;
+    flex: 0 0;
+    justify-content: center;
+    text-decoration: line-through;
+    font-family: inherit;
+    color: skyblue;
+    margin-top: 1em;
+    margin-bottom: 2px;
+}
+
+.g1 {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0;
+    padding: 0em 5em;
+    font-family: cursive;
+    line-height: 1.25;
+    color: grey;
+    font-size: medium;
+
+}
+.skills {
+    padding: 0 5em;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 20px;
+    background-color: #62a8b9;
+    border-radius: 5px;
+}
+.html, .css, .php, .javascrcipt{
+    font-family: cursive;
+    color: grey;
+    font-size: medium;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(134, 139, 141);
+    border-radius: 10px;
+    max-width: 450px;
+    margin-left: 7em;
+    align-items: center;
+    background-color: white;
+    
+}
+.contact-form label {
+    margin-bottom: 5px;
+    color: skyblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+}
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #62a8b9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #1cdfae;
+}
+.project{
+    text-decoration: underline;
+    font-family: cursive;
+    color: rgb(6, 166, 230);
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0;
+    padding: 0em 5em;
+}
+.main-footer{
+    bottom: 0;
+    background-color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1em;
+    padding-top: 0.5em;
+    border: none;
+}
+.main-footer .cont{
+    font-family: cursive;
+    color: gray;
+}
+
+/* Base styles are for desktop screens */
+
+/* Large screens (Desktops and larger) */
+@media (min-width: 1200px) {
+    .main-container {
+        flex-direction: row;
+    }
+
+    .left-half, .scrollable-half {
+        flex: 1;
+    }
+}
+
+/* Medium screens (Tablets and small desktops) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .left-half {
+        flex: 0 0 30%;
+        height: auto;
+    }
+
+    .scrollable-half {
+        flex: 1;
+        padding: 0 2em;
+    }
+
+    .contact-form {
+        max-width: 400px;
+        margin-left: 5em;
+    }
+
+    .g1 {
+        padding: 0em 4em;
+    }
+}
+
+/* Small screens (Smartphones) */
+@media (max-width: 767px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .left-half {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        height: auto;
+    }
+
+    .img-1 {
+        margin: 20px auto;
+        width: 80px;
+    }
+
+    .right-header {
+        font-size: 1.5em;
+    }
+
+    .scrollable-half {
+        padding: 0 1em;
+    }
+
+    .h2, .contact {
+        font-size: 1.2em;
+        margin-top: 1em;
+    }
+
+    .g1, .project {
+        padding: 0 1em;
+    }
+
+    .contact-form {
+        max-width: 100%;
+        margin: 0 1em;
+    }
+}
+
+/* Extra small screens (Small smartphones) */
+@media (max-width: 480px) {
+    .left-half {
+        padding: 10px;
+    }
+
+    .img-1 {
+        width: 60px;
+    }
+
+    .right-header {
+        font-size: 1.2em;
+    }
+
+    .scrollable-half {
+        padding: 0 0.5em;
+    }
+
+    .g1, .project {
+        padding: 0 0.5em;
+    }
+
+    .contact-form {
+        margin: 0;
+        padding: 0 0.5em;
+        width: 100%;
+    }
+}
